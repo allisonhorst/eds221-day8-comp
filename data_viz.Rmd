@@ -129,6 +129,9 @@ library(ggbeeswarm)
 # And for another dataset we'll explore:
 library(gapminder)
 
+# Spatial
+library(sf)
+
 ```
 
 ## Read in the lizard data
@@ -776,6 +779,42 @@ ggplot(data = lizard_counts, aes(x = year, y = common_name)) +
   theme_minimal() +
   labs(x = "Year", y = "Lizard common name")
 ```
+
+## Make a map!
+
+Let's make a map using some of the skills we've learned to customize our ggplots: 
+
+```{r}
+# First, read in the Jornada Basin vegetation data: 
+jornada_veg <- read_sf(here("data_raw","spatial_vegetation","doc.kml")) %>% dplyr::select(Name) %>% 
+  clean_names()
+
+# Initial exploratory plot (one plot per attribute)
+# plot(jornada_veg)
+
+# Remember, you can see the paletteer palettes with: 
+# View(palettes_c_names)
+# View(palettes_d_names)
+
+ggplot() +
+  geom_sf(data = jornada_veg, 
+          aes(fill = name),
+          color = NA) +
+  theme_minimal() +
+  scale_fill_paletteer_d(palette = "ggthemes::manyeys") +
+  labs(x = "Longitude",
+       y = "Latitude",
+       fill = "Dominant vegetation:",
+       title = "Jornada Basin vegetation",
+       caption = "Data source: Jornada Basin LTER") +
+  theme(legend.position = "right",
+        plot.title.position = "plot",
+        plot.caption.position = "plot",
+        plot.caption = element_text(face = "italic", color = "gray30"),
+        axis.text = element_text(size = 5))
+```
+
+
 
 # Export your graphs & figures
 

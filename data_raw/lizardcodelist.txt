@@ -1,0 +1,23 @@
+File Name: LIZARDSP.EXT     Last Update: 06/20/2005     By: John Anderson
+
+CODE SCIENTIFIC NAME                     COMMON NAME
+---- ----------------------------------- -----------------------------------
+CNEX Cnemidophorus exanguis              Chihuahuan Spotted whiptail
+CNIN Cnemidophorus inornatus             Little Striped whiptail
+CNNE Cnemidophorus neomexicanus          New Mexico Whiptail
+CNTE Cnemidophorus tessalatus            Colorado Checkered Whiptail
+CNTI Cnemidophorus tigrisatus            Western Whiptail
+CNUN Cnemidophorus uniparens             Desert Grassland Whiptail
+COTE Cophosuarus texanus                 Greater Earless Lizard
+CRCO Crotaphytus collaris                Collared Lizard
+EUOB Eumeces obsoletus                   Great Plains Skink
+GAWI Gambelia wislizenii                 Longnose Lepoard Lizard
+HOMA Holbrookia maculata                 Lesser Earless Lizard
+PHCO Phrynosoma cornutum                 Texas Horned Lizard
+PHMO Phrynosoma modestum                 Roundtail Horned Lizard
+SCMA Sceloporus magisters                Desert Spiny Lizard
+SCUN Sceloporus undulatus                Eastern Fence Lizard
+UTST Uta stansburiana                    Side-blotched Lizard
+UKCN                                     UNKNOWN Cnemidophorus
+UKLI                                     UNKNOWN lizard
+UKPH                                     UNKNOWN Phrynosoma
