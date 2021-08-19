@@ -417,8 +417,8 @@ lizard_counts <- lizards %>%
 
 ggplot(data = lizard_counts, aes(x = date, y = n)) +
   geom_line() +
-  scale_x_date(breaks = scales::breaks_width("3 years"),
-               labels = scales::label_date("'%y")) +
+  scale_x_date(breaks = scales::breaks_width("3 years"), # See date_breaks for next year!
+               labels = scales::label_date("'%y")) + # See date_labels for next year!
   scale_y_log10(labels = scales::label_scientific())
 
 ggplot(data = lizard_counts, aes(x = date, y = n)) +
@@ -698,6 +698,8 @@ p +
 q <- ggplot(data = lizards, aes(x = total_length, y = weight, group = common_name)) +
   geom_line(aes(color = common_name)) +
   gghighlight(max(weight, na.rm = TRUE) > 30)
+
+q
 ```
 
 # Compound figures with `patchwork`
@@ -814,6 +816,8 @@ ggplot() +
         plot.caption.position = "plot",
         plot.caption = element_text(face = "italic", color = "gray30"),
         axis.text = element_text(size = 5))
+
+# For next year: how would you change increments of lat / lon on x & y axis? See coord_map()
 ```
 
 
